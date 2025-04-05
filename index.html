@@ -1431,21 +1431,22 @@ function enterMainContent() {
 
 function enterMainContent() {
   document.getElementById('introContainer').style.display = 'none';
-  document.getElementById('mainContent').style.display = 'block';
+  document.getElementById('contentContainer').style.display = 'block';
 }
 
 function returnToIntro() {
-  document.getElementById('mainContent').style.display = 'none';
+  document.getElementById('contentContainer').style.display = 'none';
   document.getElementById('introContainer').style.display = 'block';
 }
+
 function setPage(page) {
-    if (page === 'intro') {
-        document.getElementById("contentContainer").style.display = "none";
-        document.getElementById("introContainer").style.display = "block";
-    } else if (page === 'main') {
-        document.getElementById("introContainer").style.display = "none";
-        document.getElementById("contentContainer").style.display = "block";
-    }
+  if (page === 'intro') {
+    document.getElementById('contentContainer').style.display = 'none';
+    document.getElementById('introContainer').style.display = 'block';
+  } else if (page === 'main') {
+    document.getElementById('introContainer').style.display = 'none';
+    document.getElementById('contentContainer').style.display = 'block';
+  }
 }
 
 
